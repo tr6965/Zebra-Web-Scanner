@@ -436,8 +436,9 @@ async function ATT_SetStore_Multipacket_Serial(id,type,property,value,cmdtype){
 async function switchHostModeSerial(){
   //WebScannerAlert("Switch host mode is currenlty unavailable in Serial COM mode")
   switchHostmodeEnable=true;
-  await EnableSwitchhostSerial();
-  await ATT_Get_Serial(135);
+  //await EnableSwitchhostSerial();
+  //await ATT_Get_Serial(135);
+    RebootSerial();
 }
 
 async function EnableSwitchhostSerial(){
